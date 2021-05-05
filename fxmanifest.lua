@@ -3,11 +3,13 @@ fx_version 'cerulean'
 game 'gta5'
 
 client_scripts {
-    'c-menu.lua'
+    'c-menu.lua',
+    'config.lua'
 }
 
 server_scripts {
-    's-menu.lua'
+    's-menu.lua',
+    'config.lua'
 }
 
 ui_page 'html/index.html'

@@ -38,5 +38,5 @@ AddEventHandler("sinaps-menu:postApplication", function(dataTemp)
 
     local data = dataTemp
         Citizen.Wait(0)
-        postApp("Nouvelle Plainte", "Sujet de Plainte", data.date, data.fname, data.sname, data.phone, data.message, data.subject, "https://discordapp.com/api/webhooks/756247396475863230/L7hCNkievniSTokFXcr1AnkufhJlfOxog465D3k3YKaMsYq5aFR8YtRd8hQRWIKClHpt")
+        postApp("Nouvelle Plainte", "Sujet de Plainte", data.date, data.fname, data.sname, data.phone, data.message, data.subject, Config.webhook)
 end)
