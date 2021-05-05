@@ -21,25 +21,27 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(interval)
  
-        if Vdist2(GetEntityCoords(PlayerPedId()), Config.Pos.x, Config.Pos.y, Config.Pos.z) < 5 then
+        if Vdist2(GetEntityCoords(PlayerPedId()), Config.Pos.x, Config.Pos.y, Config.Pos.z) < 20 then
             DrawMarker(25, Config.Pos.x, Config.Pos.y, Config.Pos.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.5, 0, 0, 255, 100, false, true, 2, false, nil, nil, false)
-            ESX.ShowHelpNotification("Appuyez sur ~INPUT_TALK~ pour déposer ~g~plainte")
             interval = 1
-            if IsControlJustPressed(1,38) then  
-       
-               Citizen.Wait(500) 
-                DrawMissionText("~b~[Vous]~s~ Bonjour, Madame !", 1400)
-                Citizen.Wait(1050)
-                DrawMissionText("~g~[Nadine]~s~ Comment puis-je vous aider !", 2000)
-                Citizen.Wait(1500)
-                DrawMissionText("~g~[Vous]~s~ Je veux déposer plainte s'il vous plait", 2100)
-                Citizen.Wait(1500)
-                DrawMissionText("~b~[Nadine]~s~ D'accord, avec plaisir. Veuillez remplir ce formulaire", 4000)
-                Citizen.Wait(55)
-                SetDisplayPlainte(true)
-                disableControl()
-                Citizen.Wait(300000)  
+            if Vdist2(GetEntityCoords(PlayerPedId()), Config.Pos.x, Config.Pos.y, Config.Pos.z) < 4 then
+                ESX.ShowHelpNotification("Appuyez sur ~INPUT_TALK~ pour déposer ~g~plainte")
+                if IsControlJustPressed(1,38) then  
+        
+                Citizen.Wait(500) 
+                    DrawMissionText("~b~[Vous]~s~ Bonjour, Madame !", 1400)
+                    Citizen.Wait(1050)
+                    DrawMissionText("~g~[Nadine]~s~ Comment puis-je vous aider !", 2000)
+                    Citizen.Wait(1500)
+                    DrawMissionText("~g~[Vous]~s~ Je veux déposer plainte s'il vous plait", 2100)
+                    Citizen.Wait(1500)
+                    DrawMissionText("~b~[Nadine]~s~ D'accord, avec plaisir. Veuillez remplir ce formulaire", 4000)
+                    Citizen.Wait(55)
+                    SetDisplayPlainte(true)
+                    disableControl()
+                    Citizen.Wait(300000)  
 
+                end
             end
         else  interval = 700 end
     end
