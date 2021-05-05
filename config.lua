@@ -1,4 +1,3 @@
 Config = {}
 
-Config.webhook = 'Discord channel webhook'
-Config.Pos = {x = -1098.01, y = -841.74 , z =19.00}
+Config.Pos = {x =  -536.777, y = -760.65, z = 31.98}

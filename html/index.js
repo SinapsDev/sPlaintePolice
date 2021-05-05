@@ -23,12 +23,12 @@ $(function () {
     // if the person uses the escape key, it will exit the resource
     document.onkeyup = function (data) {
         if (data.which == 27) {
-            $.post('https://infinity_plaintemenu/exitplainte', JSON.stringify({}));
+            $.post('https://sPlaintePolice/exitplainte', JSON.stringify({}));
             return
         }
     };
     $("#close").click(function () {
-        $.post('https://infinity_plaintemenu/exitplainte', JSON.stringify({}));
+        $.post('https://sPlaintePolice/exitplainte', JSON.stringify({}));
         return
     })
 
@@ -43,30 +43,30 @@ $(function () {
         let message = $("#message").val()
 
         if(!fname){
-            $.post('https://infinity_plaintemenu/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
+            $.post('https://sPlaintePolice/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
             return
         }else if(!sname){
-            $.post('https://infinity_plaintemenu/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
+            $.post('https://sPlaintePolice/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
             return
         }else if(!sname){
-            $.post('https://infinity_plaintemenu/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
+            $.post('https://sPlaintePolice/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
             return
         }else if(!phone){
-            $.post('https://infinity_plaintemenu/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
+            $.post('https://sPlaintePolice/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
             return
         }else if(!date){
-            $.post('https://infinity_plaintemenu/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
+            $.post('https://sPlaintePolice/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
             return
         }else if(!subject){
-            $.post('https://infinity_plaintemenu/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
+            $.post('https://sPlaintePolice/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
             return
         }else if(!message){
-            $.post('https://infinity_plaintemenu/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
+            $.post('https://sPlaintePolice/errorplainte', JSON.stringify({error: "~r~Vous devez remlire tout les champs !"}))
             return
         }
         
         // if there are no errors from above, we can send the data back to the original callback and hanndle it from there
-        $.post('https://infinity_plaintemenu/postplainte', JSON.stringify({
+        $.post('https://sPlaintePolice/postplainte', JSON.stringify({
             fname: fname,
             sname: sname,
             phone: phone,
