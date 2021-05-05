@@ -21,7 +21,7 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(interval)
  
-        if Vdist2(GetEntityCoords(PlayerPedId(), false), Config.Pos.x, Config.Pos.y, Config.Pos.z) < 1.2 then
+        if Vdist2(GetEntityCoords(PlayerPedId()), Config.Pos.x, Config.Pos.y, Config.Pos.z) < 5 then
             DrawMarker(25, Config.Pos.x, Config.Pos.y, Config.Pos.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.5, 0, 0, 255, 100, false, true, 2, false, nil, nil, false)
             ESX.ShowHelpNotification("Appuyez sur ~INPUT_TALK~ pour déposer ~g~plainte")
             interval = 1
